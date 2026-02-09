@@ -31,7 +31,7 @@ const App = () => (
       <RoleProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route path="/" element={<AppLayout><Dashboard /></AppLayout>} />
             <Route path="/projects" element={<AppLayout><ProjectsPage /></AppLayout>} />
