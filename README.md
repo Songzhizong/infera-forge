@@ -62,7 +62,20 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Deploy to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages. To enable:
+
+1. Go to your repository's `Settings` > `Pages`
+2. Under `Source`, select `GitHub Actions`
+3. Merge changes to the `main` branch to trigger automatic deployment
+4. Your site will be available at: https://songzhizong.github.io/infera-forge/
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Deploy to Lovable
+
+You can also deploy via [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) - simply click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
