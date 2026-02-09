@@ -13,6 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "Noto Sans SC", "system-ui", "-apple-system", "sans-serif"],
+      },
+      fontSize: {
+        "page-title": ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }],
+        "section-title": ["1.125rem", { lineHeight: "1.75rem", fontWeight: "600" }],
+        "body": ["0.875rem", { lineHeight: "1.25rem" }],
+        "caption": ["0.75rem", { lineHeight: "1rem" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +66,42 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+        },
+        kpi: {
+          "blue-bg": "hsl(var(--kpi-blue))",
+          "blue-icon": "hsl(var(--kpi-blue-icon))",
+          "green-bg": "hsl(var(--kpi-green))",
+          "green-icon": "hsl(var(--kpi-green-icon))",
+          "orange-bg": "hsl(var(--kpi-orange))",
+          "orange-icon": "hsl(var(--kpi-orange-icon))",
+          "red-bg": "hsl(var(--kpi-red))",
+          "red-icon": "hsl(var(--kpi-red-icon))",
+        },
+        badge: {
+          "blue-bg": "hsl(var(--badge-blue))",
+          "blue-text": "hsl(var(--badge-blue-text))",
+          "green-bg": "hsl(var(--badge-green))",
+          "green-text": "hsl(var(--badge-green-text))",
+          "orange-bg": "hsl(var(--badge-orange))",
+          "orange-text": "hsl(var(--badge-orange-text))",
+          "gray-bg": "hsl(var(--badge-gray))",
+          "gray-text": "hsl(var(--badge-gray-text))",
+          "red-bg": "hsl(var(--badge-red))",
+          "red-text": "hsl(var(--badge-red-text))",
+          "purple-bg": "hsl(var(--badge-purple))",
+          "purple-text": "hsl(var(--badge-purple-text))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +110,30 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(4px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
+        "slide-in": "slide-in 0.3s ease-out",
+      },
+      spacing: {
+        "topbar": "var(--topbar-height)",
       },
     },
   },
